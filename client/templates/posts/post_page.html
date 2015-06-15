@@ -1,0 +1,145 @@
+<template name="postPage">
+	<div class="container">
+		<div class="col-md-2"></div>
+		<div class="post col-md-8">
+			<form class="post-update">
+				<div class="row">
+					<div class="col-md-8 pull-right">
+						<!-- <div class=" img-rounded"></div> -->
+						<img src="{{image}}" id="preview" class="img-rounded holder" alt="">
+
+						<hr>
+					</div>
+					<div class="col-md-4 pull-left">
+
+						<div class="form-group">
+							<h2> <label for="text">Nom du bien : {{bien}}</label></h2>
+
+						</div>
+						<div class="form-group form-control-static">
+							<h3> <label for="number">Quantité : {{quantity}}</label></h3>
+
+						</div>
+						<div class="form-group">
+							<h3>	<label for="text">Unité : {{unity}}</label></h3>
+
+						</div>
+
+
+
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<h3><label for="text">{{title}}</label></h3>
+
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="text">{{description}}</label>
+
+						<br>
+					</div>
+				</div>
+				<br>
+				<br>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°1 : {{founisseur1}}</label>
+					</div>
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°2: {{fournisseur2}}</label>
+					</div>
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°3 : {{fournisseur3}}</label>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-4 pull-right">
+						<label for="text">{{region}},{{pays}}</label>
+					</div>
+
+				</div>
+				<br>
+
+
+
+
+				{{#if currentUser}}
+
+				<h3>Voulez-vous participer a ce projet ? Si oui remplissez le champ ci dessous !</h3>
+
+				{{>participation}}
+
+
+				<!-- <div class="row">
+					<div class="col-md-12">
+						<button class="btn btn btn-success col-md-12 col-xs-12">
+							<h1 class="text-center">Participer à ce projet</h1>
+						</button>
+
+					</div>
+				</div> -->
+				{{else}}
+				{{/if}}
+
+
+			</form>
+			<br><br><br><br>
+		</div>
+	</div>
+
+	<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" >
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="">Participation</h4>
+				</div>
+				<div class="modal-body">
+					{{> myModal}}
+				</div>
+
+
+			</div>
+		</div>
+	</div> -->
+
+
+</template>
+
+<template name="participation">
+
+	<div class="form-group">
+		<label for="number">Quantité</label>
+		<input type="number" name="participation" class="form-control" id="participation" placeholder="Quantité">
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</div>
+
+</template>
+
+<!-- <template name="myModal">
+	<div class="container">
+		<div class="col-md-6">
+			<h3>Participer</h3>
+			<form class="form-horizontal ">
+				<div class="form-group">
+					<label for="qwanted" class="col-sm-2 control-label">Quantitée souhaitée:</label>
+					<div class="col-sm-10">
+						<input type="number" class="form-control" id="qwanted" placeholder="Quantité">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+
+				</div>
+			</form>
+
+		</div>
+	</div>
+</template> -->

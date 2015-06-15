@@ -1,0 +1,14 @@
+<template name="categories">
+
+	<div class="container">
+		<ol class="breadcrumb">
+			<li><a href="{{pathFor 'categories'}}">Home</a></li>
+		</ol>
+		<div class="row">
+			{{#each categories}}
+				{{> category}}
+			{{/each}}
+		</div>
+	</div>
+
+</template>

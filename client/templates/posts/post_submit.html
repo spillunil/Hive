@@ -1,0 +1,106 @@
+<!-- {{> upload_bootstrap }} -->
+<!-- {{> dropzone }} -->
+
+<!-- ================================= -->
+
+
+<template name="postSubmit">
+	<div class="container">
+		<div class="col-md-2"></div>
+		<div class="post col-md-8">
+			<form class="post-submit">
+				<div class="row">
+					<div class="col-md-8">
+						<!-- <div class=" img-rounded"></div> -->
+						<img src="resources/blue-camera-icon.png" id="preview" class="img-rounded holder" alt="">
+						<div style="display:none;">
+							<input type="file" id="fileInput">
+						</div>
+						<p>Cliquez pour uplader une image </p>
+						<!-- {{> upload_bootstrap fileTypes='.png,.jpg' }} -->
+						<hr>
+					</div>
+					<div class="col-md-4 pull-right">
+						<div class="form-group">
+							<label for="disabledSelect">Categories</label>
+							<select id="" name="category" class="form-control">
+								<option value="aliments">Aliments</option>
+								<option value="outillage"> Outillage</option>
+								<option value="jardin">Jardin</option>
+								<option value="bricolage">Bricolage</option>
+								<option value="mecanique">Mécanique</option>
+								<option value="divers">Divers</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="text">Nom du bien</label>
+							<input type="text" name="bien" class="form-control" id="bien" placeholder="Nom du bien ">
+						</div>
+						<div class="form-group">
+							<label for="number">Quantité</label>
+							<input type="number" name="quantity" class="form-control" id="quantity" placeholder="Quantité">
+						</div>
+						<div class="form-group">
+							<label for="text">Unité</label>
+							<input type="text" name="unity" class="form-control" id="unity" placeholder="Unité">
+						</div>
+
+
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="text">Titre</label>
+						<input type="text" class="form-control" name="title" id="title" placeholder="Title" maxlength="200">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="text">Description</label>
+						<textarea class="form-control" name="description" id="description" rows="8" placeholder="Description"></textarea>
+						<br>
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°1</label>
+						<input type="text" name="fournisseur1" class="form-control" id="fournisseur1" placeholder="Fournisseur n°1">
+					</div>
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°2</label>
+						<input type="text" name="fournisseur2" class="form-control" id="fournisseur2" placeholder="Fournisseur2">
+					</div>
+					<div class="col-md-4">
+						<label for="text">Fournisseur n°3</label>
+						<input type="text" name="fournisseur3" class="form-control" id="fournisseur3" placeholder="Fournisseur3">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="text">Région</label>
+						<input type="text" name="region" class="form-control" id="region" placeholder="Région">
+					</div>
+					<div class="col-md-8">
+						<label for="text">Pays</label>
+						<input type="text" name="pays" class="form-control" id="pays" placeholder="Pays">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-12">
+						<button class="btn btn btn-success col-md-12 col-xs-12">
+							<h1 class="text-center">Poster</h1>
+						</button>
+					</div>
+				</div>
+			</form>
+			<br><br><br><br>
+		</div>
+
+	</div>
+</template>
